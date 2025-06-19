@@ -1,40 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>FENXT Shortcuts - SDOSS</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SDOpera FENXT Shortcuts</title>
+<style>
+  /* Reset some defaults */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 2rem;
+    color: #00274D;
+  }
+
+  h2 {
+    text-align: center;
+    color: #00274D;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    padding: 2rem;
+  }
+
+  button {
+    width: 100%;
+    background-color: #00274D;
+    border: none;
+    color: #FFC72C;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 1.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 6px rgb(0 39 77 / 0.4);
+  }
+
+  button:hover, button:focus {
+    background-color: #FFC72C;
+    color: #00274D;
+    outline: none;
+    box-shadow: 0 4px 10px rgb(255 199 44 / 0.7);
+  }
+
+  button:active {
+    transform: scale(0.97);
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    body {
+      padding: 1rem;
+    }
+    .container {
+      padding: 1.25rem;
+    }
+  }
+</style>
 </head>
 <body>
-    <h2>SDOSS Shortcuts</h2>
+  <div class="container">
+    <h2>SDOpera Shortcuts</h2>
 
     <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/deposits/receivables?envid=p-rd-_BZf7q0-kXfuE9rcXAg&svcid=fenxt' }, '*')">
-        Open/Create New Deposit
+      Open/Create New Deposit
     </button>
-    <br><br>
 
     <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/receivables/payment?svcid=fenxt&envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
-        Open Payment
+      Open Payment
     </button>
-    <br><br>
 
     <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/receivables/invoice?svcid=fenxt&envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
-        Open/Create New Invoice
+      Open/Create New Invoice
     </button>
-    <br><br>
 
     <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/ledger/postsubledgers?envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
-        Post Payment/Deposit/Invoice Batches
+      Post Payment/Deposit/Invoice Batches
     </button>
-    <br><br>
 
     <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/query/fenxt-ar?svcid=fenxt&envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
-        SDOSS Outstanding Invoice Query/Report
+      SDOSS Outstanding Invoice Query/Report
     </button>
-    <br><br>
 
     <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/ledger/project?envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
-        Create Job/Project Number
+      Create Job/Project Number
     </button>
-
+  </div>
 </body>
 </html>
