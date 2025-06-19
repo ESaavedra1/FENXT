@@ -2,10 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FENXT Shortcut Add-in</title>
+    <title>FENXT Shortcuts - SDOSS</title>
 </head>
 <body>
-    <h3>Shortcut: Nuevo Asiento Contable</h3>
-    <button onclick="parent.postMessage({ message: 'navigate', url: 'https://fe.nxt.blackbaud.com/general-ledger/journal-entry' }, '*')">Ir a Nuevo Asiento</button>
+    <h2>SDOSS Shortcuts</h2>
+
+    <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/deposits/receivables?envid=p-rd-_BZf7q0-kXfuE9rcXAg&svcid=fenxt' }, '*')">
+        Open/Create New Deposit
+    </button>
+    <br><br>
+
+    <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/receivables/payment?svcid=fenxt&envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
+        Open Payment
+    </button>
+    <br><br>
+
+    <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/receivables/invoice?svcid=fenxt&envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
+        Open/Create New Invoice
+    </button>
+    <br><br>
+
+    <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/ledger/postsubledgers?envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
+        Post Payment/Deposit/Invoice Batches
+    </button>
+    <br><br>
+
+    <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/query/fenxt-ar?svcid=fenxt&envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
+        SDOSS Outstanding Invoice Query/Report
+    </button>
+    <br><br>
+
+    <button onclick="parent.postMessage({ message: 'navigate', url: 'https://host.nxt.blackbaud.com/ledger/project?envid=p-rd-_BZf7q0-kXfuE9rcXAg' }, '*')">
+        Create Job/Project Number
+    </button>
+
 </body>
 </html>
